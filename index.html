@@ -6,119 +6,30 @@
     <meta name="referrer" content="no-referrer">
   <title>Chainsaw Records Catalog</title>
   <style>
-    :root {
-      --bg-color: #080808;
-      --accent: #c0392b;
-      --text: #f0f0f0;
-      --border: #333;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Georgia", serif;
-      background-color: var(--bg-color);
-      background-image: url('https://web.archive.org/web/19970503041457im_/http://www.chainsaw.com/pics/clip1.jpg');
-      background-repeat: repeat;
-      background-size: 350px;
-      background-attachment: fixed;
-      color: var(--text);
-      line-height: 1.4;
-      font-size: 1.4rem;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(8, 8, 8, 0.9);
-      z-index: -1;
-    }
-    header {
-      padding: 5rem 2rem;
-      text-align: center;
-      border-bottom: 4px solid var(--accent);
-      margin-bottom: 4rem;
-    }
-    h1 {
-      font-size: 5rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.6rem;
-      letter-spacing: 0.2em;
-      color: #888;
-      text-transform: uppercase;
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem 10rem;
-    }
-    section + section { margin-top: 6rem; }
-    h2 {
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      color: var(--accent);
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 1rem;
-      margin-bottom: 3rem;
-    }
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 4rem 3rem;
-    }
-    .release {
-      display: flex;
-      flex-direction: column;
-    }
-    .cover-box {
-      width: 100%;
-      aspect-ratio: 1;
-      background: #111;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-    }
-    .cover-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .no-scan {
-      font-size: 1rem;
-      color: #444;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .info { display: flex; flex-direction: column; gap: 0.4rem; }
-    .cat-num {
-      font-size: 1.1rem;
-      color: var(--accent);
-      font-weight: bold;
-      letter-spacing: 0.1em;
-    }
-    .artist { font-size: 1.8rem; font-weight: bold; color: #fff; }
-    .title { font-size: 1.6rem; font-style: italic; color: #ccc; }
-    .fmt-year { font-size: 1.1rem; color: #666; }
-    footer {
-      text-align: center;
-      padding: 5rem 2rem;
-      border-top: 1px solid #222;
-      color: #444;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 3rem; }
-      .catalog { grid-template-columns: 1fr; }
-    }
-  </style>
+:root{color-scheme:light;--ink:#202029;--muted:#66616a;--line:#ded9dc;--accent:#793e53;--paper:#faf9f8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+header{padding:34px max(24px,calc((100vw - 1200px)/2));border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:clamp(1.8rem,4vw,2.65rem);letter-spacing:-.055em;line-height:1.05;font-weight:800}
+header p{margin:.45rem 0 0;font-size:.88rem;color:var(--muted)}
+main{max-width:1200px;margin:auto;padding:48px 24px 96px}
+section+section{margin-top:72px}
+h2{margin:0 0 25px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:1.35rem;letter-spacing:-.025em}
+.catalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:38px 22px}
+.release{min-width:0}
+.cover-box{aspect-ratio:1;overflow:hidden;background:#ebe7e8;display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.cover-box img{width:100%;height:100%;object-fit:cover}
+.no-scan{font-size:.85rem;color:#746d70}
+.info{display:flex;flex-direction:column;gap:2px}
+.cat-num{font-size:.75rem;font-weight:700;letter-spacing:.075em;color:var(--accent);margin-bottom:4px}
+.artist{font-size:1.05rem;font-weight:700;line-height:1.3}
+.title{font-size:1rem;color:#413c40}
+.fmt-year{font-size:.85rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:800px){.catalog{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){header{padding:26px 20px}main{padding:36px 20px 72px}.catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}section+section{margin-top:54px}.artist{font-size:.95rem}.title{font-size:.9rem}}
+</style>
 </head>
 <body>
   <header>
@@ -160,7 +71,7 @@
     </section>
 
     <section>
-      <h2>Discography</h2>
+      <h2>Records</h2>
       <div class="catalog">
         <div class="release">
           <div class="cover-box"><img src="https://i.discogs.com/pNH53gVi2qp99S3m2N3ND61upYAOBXDSafS8D4G_cK8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNTQy/MzU3LTE1NTYxOTkz/NjQtOTY4OS5qcGVn.jpeg" alt="CHSW 4"></div>
@@ -349,15 +260,6 @@
             <div class="artist">Tracy + The Plastics</div>
             <div class="title">Forever Sucks EP</div>
             <div class="fmt-year">CD, 2002</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img src="https://i.discogs.com/pBX7xEOKmkyo2kGiXiX2VvKUNpDmhnJJvXdyyDvFdfY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ1ODcz/NTMtMTM2OTE5MjI5/OS05NDMzLmpwZWc.jpeg" alt="CHSW 28"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 28</div>
-            <div class="artist">Show Me The Pink</div>
-            <div class="title">Velocipedomania!</div>
-            <div class="fmt-year">CD, 2005</div>
           </div>
         </div>
       </div>

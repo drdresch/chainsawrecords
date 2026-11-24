@@ -1,249 +1,57 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e7ce55">
-<meta name="description" content="The Chainsaw Records catalog. Records, tapes and zines from Portland, Oregon.">
-<title>Chainsaw Records</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171717"><meta name="description" content="Chainsaw Records: records, tapes and zines."><title>Chainsaw Records</title>
 <style>
-:root{--paper:#f5f4ef;--ink:#171717;--muted:#66635e;--yellow:#e7ce55;--line:#cfcdc4}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
-a{color:inherit}
-.top{background:var(--yellow);border-bottom:1px solid var(--ink)}
-.top-inner,.wrap{max-width:1440px;margin:0 auto;padding-left:clamp(22px,5vw,76px);padding-right:clamp(22px,5vw,76px)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:23px;font-size:.85rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
-.bar a{text-decoration:none;border-bottom:1px solid currentColor;padding:4px 0}
-.hero{padding-top:clamp(58px,10vw,135px);padding-bottom:clamp(42px,6vw,80px)}
-.logo{display:block;width:min(100%,1050px);height:auto}
-.intro{border-top:1px solid rgba(23,23,23,.7);display:flex;justify-content:space-between;align-items:end;gap:28px;margin-top:clamp(42px,6vw,80px);padding-top:20px}
-.intro h1{font-size:clamp(1.4rem,3.1vw,2.7rem);line-height:1.12;letter-spacing:-.045em;margin:0;font-weight:700}
-.intro p{margin:0;font-size:.9rem;white-space:nowrap}
-main{padding-top:clamp(56px,7vw,100px);padding-bottom:100px}
-.heading{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:30px}
-.heading h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.06em;line-height:1;margin:0}
-.heading span{font-size:.85rem;color:var(--muted);white-space:nowrap}
-.catalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:48px 22px}
-.release{min-width:0}
-.cover-box{aspect-ratio:1;overflow:hidden;background:#e5e3dc;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
-.cover-box img{width:100%;height:100%;object-fit:cover}
-.archive-art img,.zine-art img{object-fit:contain}
-.no-scan{font-size:.85rem;color:var(--muted)}
-.info{display:flex;flex-direction:column;gap:3px}
-.cat-num{font-size:.75rem;font-weight:700;letter-spacing:.07em;color:#625c46;margin-bottom:4px}
-.artist{font-size:1.05rem;font-weight:750;line-height:1.25}
-.title{font-size:1rem;line-height:1.35}
-.fmt-year{font-size:.85rem;color:var(--muted)}
-footer{border-top:1px solid var(--ink)}
-.foot-inner{display:flex;justify-content:space-between;gap:20px;padding-top:25px;padding-bottom:30px;font-size:.85rem}
-@media(max-width:850px){.catalog{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 18px}}
-@media(max-width:560px){.bar{font-size:.72rem}.hero{padding-top:60px}.intro{display:block}.intro p{margin-top:15px}.heading{margin-bottom:22px}.heading span{font-size:.75rem}.catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 14px}.artist{font-size:.95rem}.title{font-size:.92rem}.fmt-year{font-size:.8rem}main{padding-bottom:70px}.foot-inner{display:block}.foot-inner span{display:block;margin-top:8px}}
-</style>
-</head>
-<body>
-<header class="top"><div class="top-inner">
-<div class="bar"><span>Portland, Oregon</span><a href="#catalog">Browse the catalog</a></div>
-<div class="hero"><img class="logo" src="images/chainsaw-logo.png" alt="Chainsaw Records">
-<div class="intro"><h1>Records, tapes &amp; zines.</h1><p>Independent since 1991</p></div></div>
-</div></header>
-<main class="wrap" id="catalog">
-<div class="heading"><h2>The catalog</h2><span>Records, tapes &amp; zines</span></div>
-<div class="catalog">
-<div class="release">
-          <div class="cover-box zine-art"><img loading="lazy" src="images/chainsaw-zine-2.jpg" alt="Yellow cover of Chainsaw zine number 2"></div>
-          <div class="info"><div class="cat-num">CHAINSAW 1–3.5</div><div class="artist">Zines</div></div>
-        </div>
-<div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-4.jpg" alt="CHSW 4 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 4</div>
-            <div class="artist">Various Artists</div>
-            <div class="title">Chainsaw 4</div>
-            <div class="fmt-year">Cassette Compilation, 1992</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><div class="no-scan">Secret</div></div>
-          <div class="info">
-            <div class="cat-num">CHSW 5</div>
-            <div class="artist">Secret Release</div>
-            <div class="title">&nbsp;</div>
-            <div class="fmt-year">&nbsp;</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-6.jpg" alt="CHSW 6 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 6</div>
-            <div class="artist">Frumpies</div>
-            <div class="title">Frumpies 7″</div>
-            <div class="fmt-year">7", 1993</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-7.jpg" alt="CHSW 7 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 7</div>
-            <div class="artist">Heartless Martin</div>
-            <div class="title">Tonigh</div>
-            <div class="fmt-year">Cassette EP, 1993</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-8.jpg" alt="CHSW 8 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 8</div>
-            <div class="artist">The Fakes</div>
-            <div class="title">Real Fiction</div>
-            <div class="fmt-year">LP/CD, 1995</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-9.jpg" alt="CHSW 9"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 9</div>
-            <div class="artist">Excuse Seventeen</div>
-            <div class="title">Excuse Seventeen</div>
-            <div class="fmt-year">LP/CD, 1995</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-10.jpg" alt="CHSW 10 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 10</div>
-            <div class="artist">Heavens to Betsy</div>
-            <div class="title">Direction...</div>
-            <div class="fmt-year">7", 1994</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-11.jpg" alt="CHSW 11"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 11</div>
-            <div class="artist">Team Dresch</div>
-            <div class="title">Personal Best</div>
-            <div class="fmt-year">LP/CD/Cassette, 1995</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-12.png" alt="CHSW 12"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 12</div>
-            <div class="artist">Sleater-Kinney</div>
-            <div class="title">Sleater-Kinney</div>
-            <div class="fmt-year">LP/CD, 1995</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-13.jpg" alt="CHSW 13"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 13</div>
-            <div class="artist">Sleater-Kinney</div>
-            <div class="title">Call The Doctor</div>
-            <div class="fmt-year">LP/CD, 1996</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-14.jpg" alt="CHSW 14 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 14</div>
-            <div class="artist">Kaia</div>
-            <div class="title">Kaia</div>
-            <div class="fmt-year">LP/CD, 1996</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-15.jpg" alt="CHSW 15"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 15</div>
-            <div class="artist">The Third Sex</div>
-            <div class="title">Card Carryin'</div>
-            <div class="fmt-year">CD, 1996</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-17.jpg" alt="CHSW 17 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 17</div>
-            <div class="artist">Longstocking</div>
-            <div class="title">Once Upon A Time Called Now</div>
-            <div class="fmt-year">LP/CD, 1997</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-18.jpg" alt="CHSW 18"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 18</div>
-            <div class="artist">Team Dresch</div>
-            <div class="title">Captain My Captain</div>
-            <div class="fmt-year">LP/CD, 1996</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-19.jpg" alt="CHSW 19"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 19</div>
-            <div class="artist">The Need</div>
-            <div class="title">The Need</div>
-            <div class="fmt-year">CD, 1997</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-20.jpg" alt="CHSW 20"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 20</div>
-            <div class="artist">The Need</div>
-            <div class="title">The Need Is Dead</div>
-            <div class="fmt-year">CD, 2000</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-21.jpg" alt="CHSW 21"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 21</div>
-            <div class="artist">The Third Sex</div>
-            <div class="title">Back To Go</div>
-            <div class="fmt-year">CD, 1999</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-22.jpg" alt="CHSW 22 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 22</div>
-            <div class="artist">No. 2</div>
-            <div class="title">No Memory</div>
-            <div class="fmt-year">CD, 1999</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box"><img loading="lazy" src="images/chsw-23.jpg" alt="CHSW 23"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 23</div>
-            <div class="artist">Tracy + The Plastics</div>
-            <div class="title">Muscler's Guide to Videonics</div>
-            <div class="fmt-year">CD, 2001</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-25.jpg" alt="CHSW 25 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 25</div>
-            <div class="artist">The Infinite Xs</div>
-            <div class="title">The Infinite Xs</div>
-            <div class="fmt-year">LP/CD, 2002</div>
-          </div>
-        </div>
-        <div class="release">
-          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-26.jpg" alt="CHSW 26 artwork from the Chainsaw archive"></div>
-          <div class="info">
-            <div class="cat-num">CHSW 26</div>
-            <div class="artist">Tracy + The Plastics</div>
-            <div class="title">Forever Sucks EP</div>
-            <div class="fmt-year">CD, 2002</div>
-          </div>
-        </div>
-</div></main>
-<footer><div class="wrap foot-inner"><strong>Chainsaw Records</strong><span>Portland, Oregon</span></div></footer>
-</body></html>
+:root{color-scheme:light;--ink:#171717;--paper:#f6f5f0;--yellow:#e6cf58}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;background:var(--paper);color:var(--ink)}a{color:inherit}
+header{background:#171717;color:white;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px clamp(20px,4vw,60px)}.brand img{display:block;width:clamp(170px,23vw,300px);height:auto;filter:invert(1)}nav{display:flex;gap:24px;align-items:center}nav a{font-size:.88rem;font-weight:700;text-decoration:none;border-bottom:1px solid transparent}nav a:hover,nav a:focus-visible{border-color:var(--yellow)}
+.intro{padding:30px clamp(20px,4vw,60px);display:flex;align-items:end;justify-content:space-between;gap:20px}.intro h1{font-size:clamp(1.7rem,4vw,3rem);letter-spacing:-.05em;line-height:1;margin:0}.intro p{font-size:.9rem;margin:0;color:#555}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#111}
+.tile{appearance:none;display:block;position:relative;aspect-ratio:4/3;overflow:hidden;border:0;padding:0;margin:0;background:#262626;color:#fff;text-align:left;cursor:pointer;min-width:0}
+.tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}.tile.zine img{object-fit:contain;background:#e4cf5c}.tile:hover img{transform:scale(1.035)}
+.tile:focus-visible{outline:4px solid var(--yellow);outline-offset:-4px;z-index:1}.caption{position:absolute;inset:auto 0 0;padding:25px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,.84));display:flex;flex-direction:column;line-height:1.2;text-shadow:0 1px 3px #000;font-size:.8rem}.caption strong{font-size:.95rem;margin-top:3px}.secret{display:grid;place-items:center;height:100%;font-size:1.1rem}
+.about{padding:clamp(60px,8vw,110px) clamp(20px,4vw,60px);max-width:1000px}.about h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.05em;line-height:1.05;margin:0 0 26px}.about p{max-width:75ch}
+footer{background:var(--ink);color:white;padding:24px clamp(20px,4vw,60px);font-size:.85rem;display:flex;justify-content:space-between;gap:20px}
+dialog{border:0;padding:0;width:min(940px,calc(100% - 32px));max-height:calc(100% - 32px);background:var(--paper);color:var(--ink);box-shadow:0 10px 50px #0008}dialog::backdrop{background:#000b}.dialog-head{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--yellow)}.dialog-head span{font-size:.8rem;letter-spacing:.05em;font-weight:700}.close{background:#171717;color:white;border:0;padding:10px 16px;font:inherit;cursor:pointer}.dialog-body{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:30px}.dialog-body img{display:block;width:100%;height:auto;background:#ddd}.dialog-body h2{font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.05;letter-spacing:-.045em;margin:5px 0 10px}.dialog-body h3{font-size:1rem;margin:25px 0 8px}.dialog-body ol{padding-left:1.4em;margin:0}.dialog-body li{padding:2px 0}.dialog-body p{margin:10px 0}.archive-link{display:inline-block;margin-top:24px;font-weight:700}
+@media(max-width:900px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){header{padding:22px 20px}.brand img{width:165px}nav{gap:16px}nav a{font-size:.8rem}.intro{align-items:start;flex-direction:column;padding:27px 20px 24px}.wall{grid-template-columns:repeat(2,minmax(0,1fr))}.caption{font-size:.7rem;padding:20px 9px 9px}.caption strong{font-size:.8rem}.dialog-body{display:block;padding:20px}.dialog-body img{margin-bottom:24px}footer{display:block}footer span{display:block;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile img{transition:none}}
+</style></head><body>
+<header><a class="brand" href="#top" aria-label="Chainsaw Records home"><img src="images/chainsaw-logo.png" alt="Chainsaw Records"></a><nav aria-label="Main navigation"><a href="#catalog">Catalog</a><a href="#about">About</a></nav></header>
+<main id="top"><div class="intro" id="catalog"><h1>Records, tapes &amp; zines.</h1><p>Select a cover for details.</p></div>
+<div class="wall"><button class="tile zine" type="button" data-id="z" aria-label="Zines"><img src="images/chainsaw-zine-2.jpg" alt="" loading="lazy"><span class="caption"><span>CHAINSAW 1–3.5</span><strong>Zines</strong></span></button>
+<button class="tile " type="button" data-id="4" aria-label="Various Artists: Chainsaw 4"><img src="images/archive-chsw-4.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 4</span><strong>Various Artists · Chainsaw 4</strong></span></button>
+<button class="tile " type="button" data-id="5" aria-label="Secret Release: &nbsp;"><span class="secret">Secret</span><span class="caption"><span>CHSW 5</span><strong>Secret Release</strong></span></button>
+<button class="tile " type="button" data-id="6" aria-label="Frumpies: Frumpies 7″"><img src="images/archive-chsw-6.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 6</span><strong>Frumpies · Frumpies 7″</strong></span></button>
+<button class="tile " type="button" data-id="7" aria-label="Heartless Martin: Tonigh"><img src="images/archive-chsw-7.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 7</span><strong>Heartless Martin · Tonigh</strong></span></button>
+<button class="tile " type="button" data-id="8" aria-label="The Fakes: Real Fiction"><img src="images/archive-chsw-8.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 8</span><strong>The Fakes · Real Fiction</strong></span></button>
+<button class="tile " type="button" data-id="9" aria-label="Excuse Seventeen: Excuse Seventeen"><img src="images/archive-chsw-9.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 9</span><strong>Excuse Seventeen · Excuse Seventeen</strong></span></button>
+<button class="tile " type="button" data-id="10" aria-label="Heavens to Betsy: Direction..."><img src="images/archive-chsw-10.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 10</span><strong>Heavens to Betsy · Direction...</strong></span></button>
+<button class="tile " type="button" data-id="11" aria-label="Team Dresch: Personal Best"><img src="images/archive-chsw-11.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 11</span><strong>Team Dresch · Personal Best</strong></span></button>
+<button class="tile " type="button" data-id="12" aria-label="Sleater-Kinney: Sleater-Kinney"><img src="images/archive-chsw-12.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 12</span><strong>Sleater-Kinney · Sleater-Kinney</strong></span></button>
+<button class="tile " type="button" data-id="13" aria-label="Sleater-Kinney: Call The Doctor"><img src="images/archive-chsw-13.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 13</span><strong>Sleater-Kinney · Call The Doctor</strong></span></button>
+<button class="tile " type="button" data-id="14" aria-label="Kaia: Kaia"><img src="images/archive-chsw-14.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 14</span><strong>Kaia · Kaia</strong></span></button>
+<button class="tile " type="button" data-id="15" aria-label="The Third Sex: Card Carryin'"><img src="images/archive-chsw-15.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 15</span><strong>The Third Sex · Card Carryin'</strong></span></button>
+<button class="tile " type="button" data-id="17" aria-label="Longstocking: Once Upon A Time Called Now"><img src="images/archive-chsw-17.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 17</span><strong>Longstocking · Once Upon A Time Called Now</strong></span></button>
+<button class="tile " type="button" data-id="18" aria-label="Team Dresch: Captain My Captain"><img src="images/archive-chsw-18.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 18</span><strong>Team Dresch · Captain My Captain</strong></span></button>
+<button class="tile " type="button" data-id="19" aria-label="The Need: The Need"><img src="images/archive-chsw-19.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 19</span><strong>The Need · The Need</strong></span></button>
+<button class="tile " type="button" data-id="20" aria-label="The Need: The Need Is Dead"><img src="images/archive-chsw-20.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 20</span><strong>The Need · The Need Is Dead</strong></span></button>
+<button class="tile " type="button" data-id="21" aria-label="The Third Sex: Back To Go"><img src="images/archive-chsw-21.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 21</span><strong>The Third Sex · Back To Go</strong></span></button>
+<button class="tile " type="button" data-id="22" aria-label="No. 2: No Memory"><img src="images/archive-chsw-22.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 22</span><strong>No. 2 · No Memory</strong></span></button>
+<button class="tile " type="button" data-id="23" aria-label="Tracy + The Plastics: Muscler's Guide to Videonics"><img src="images/archive-chsw-23.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 23</span><strong>Tracy + The Plastics · Muscler's Guide to Videonics</strong></span></button>
+<button class="tile " type="button" data-id="25" aria-label="The Infinite Xs: The Infinite Xs"><img src="images/archive-chsw-25.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 25</span><strong>The Infinite Xs · The Infinite Xs</strong></span></button>
+<button class="tile " type="button" data-id="26" aria-label="Tracy + The Plastics: Forever Sucks EP"><img src="images/archive-chsw-26.jpg" alt="" loading="lazy"><span class="caption"><span>CHSW 26</span><strong>Tracy + The Plastics · Forever Sucks EP</strong></span></button></div>
+<section class="about" id="about"><h2>About Chainsaw Records</h2>
+<p><strong>Chainsaw Records</strong> is an independent record label run by Donna Dresch, devoted to queercore bands and operating out of Portland, Oregon.</p>
+<p>Chainsaw began life as a zine published by Donna Dresch in the late 1980s. Musicians and writers featured in the zine included Lois Maffeo, Jena von Brücker, Juliana Lueking, Candice Pederson, G.B. Jones and Larrybob. Chainsaw was one of the seminal queercore zines that, along with J.D.s and Homocore, helped define the movement.</p>
+<p>“In 1991…Chainsaw developed from a zine into a record label. This began simply enough when she made a compilation cassette of her favourite bands and started to sell these while on tour with Fifth Column,” writes Amy Spencer in <em>DIY: The Rise of Lo-Fi Culture</em>. In 1994 Chainsaw began to release LPs and singles, beginning with the release of The Fakes, the Frumpies and the first Team Dresch LP, <em>Personal Best</em>. This was followed by a co-release with Candy Ass Records, the double LP/CD compilation, <em>Free to Fight</em>.</p>
+<p>“The label established itself as a vital element of the queercore scene,” says Spencer, as Chainsaw then began to release records by a variety of queer, mainly women artists. Many bands, such as Sleater-Kinney, put out their initial recordings on the label. The Chainsaw website and its message board helped build community and provided a place for expression by queers and music fans.</p>
+</section></main><footer><strong>Chainsaw Records</strong><span>Portland, Oregon</span></footer>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><span id="detail-number"></span><button class="close" type="button">Close</button></div><div class="dialog-body"><div><img id="detail-image" alt=""></div><div><h2 id="detail-title"></h2><p id="detail-format"></p><p id="detail-members"></p><p id="detail-note"></p><div id="track-section"><h3>Tracks</h3><ol id="tracks"></ol></div><a id="original" class="archive-link">View the original release page</a></div></div></dialog>
+<script>
+const DATA={"cards":[{"id":"z","cat":"CHAINSAW 1–3.5","artist":"Zines","title":"","format":"","src":"images/chainsaw-zine-2.jpg"},{"id":"4","cat":"CHSW 4","artist":"Various Artists","title":"Chainsaw 4","format":"Cassette Compilation, 1992","src":"images/archive-chsw-4.jpg"},{"id":"5","cat":"CHSW 5","artist":"Secret Release","title":"&nbsp;","format":"&nbsp;","src":""},{"id":"6","cat":"CHSW 6","artist":"Frumpies","title":"Frumpies 7″","format":"7\", 1993","src":"images/archive-chsw-6.jpg"},{"id":"7","cat":"CHSW 7","artist":"Heartless Martin","title":"Tonigh","format":"Cassette EP, 1993","src":"images/archive-chsw-7.jpg"},{"id":"8","cat":"CHSW 8","artist":"The Fakes","title":"Real Fiction","format":"LP/CD, 1995","src":"images/archive-chsw-8.jpg"},{"id":"9","cat":"CHSW 9","artist":"Excuse Seventeen","title":"Excuse Seventeen","format":"LP/CD, 1995","src":"images/archive-chsw-9.jpg"},{"id":"10","cat":"CHSW 10","artist":"Heavens to Betsy","title":"Direction...","format":"7\", 1994","src":"images/archive-chsw-10.jpg"},{"id":"11","cat":"CHSW 11","artist":"Team Dresch","title":"Personal Best","format":"LP/CD/Cassette, 1995","src":"images/archive-chsw-11.jpg"},{"id":"12","cat":"CHSW 12","artist":"Sleater-Kinney","title":"Sleater-Kinney","format":"LP/CD, 1995","src":"images/archive-chsw-12.jpg"},{"id":"13","cat":"CHSW 13","artist":"Sleater-Kinney","title":"Call The Doctor","format":"LP/CD, 1996","src":"images/archive-chsw-13.jpg"},{"id":"14","cat":"CHSW 14","artist":"Kaia","title":"Kaia","format":"LP/CD, 1996","src":"images/archive-chsw-14.jpg"},{"id":"15","cat":"CHSW 15","artist":"The Third Sex","title":"Card Carryin'","format":"CD, 1996","src":"images/archive-chsw-15.jpg"},{"id":"17","cat":"CHSW 17","artist":"Longstocking","title":"Once Upon A Time Called Now","format":"LP/CD, 1997","src":"images/archive-chsw-17.jpg"},{"id":"18","cat":"CHSW 18","artist":"Team Dresch","title":"Captain My Captain","format":"LP/CD, 1996","src":"images/archive-chsw-18.jpg"},{"id":"19","cat":"CHSW 19","artist":"The Need","title":"The Need","format":"CD, 1997","src":"images/archive-chsw-19.jpg"},{"id":"20","cat":"CHSW 20","artist":"The Need","title":"The Need Is Dead","format":"CD, 2000","src":"images/archive-chsw-20.jpg"},{"id":"21","cat":"CHSW 21","artist":"The Third Sex","title":"Back To Go","format":"CD, 1999","src":"images/archive-chsw-21.jpg"},{"id":"22","cat":"CHSW 22","artist":"No. 2","title":"No Memory","format":"CD, 1999","src":"images/archive-chsw-22.jpg"},{"id":"23","cat":"CHSW 23","artist":"Tracy + The Plastics","title":"Muscler's Guide to Videonics","format":"CD, 2001","src":"images/archive-chsw-23.jpg"},{"id":"25","cat":"CHSW 25","artist":"The Infinite Xs","title":"The Infinite Xs","format":"LP/CD, 2002","src":"images/archive-chsw-25.jpg"},{"id":"26","cat":"CHSW 26","artist":"Tracy + The Plastics","title":"Forever Sucks EP","format":"CD, 2002","src":"images/archive-chsw-26.jpg"}],"details":{"4":["","Some Velvet Sidewalk – Dumb|Frightwig – I Thought I Knew You|Bikini Kill – This Is Not A Test|Gag Order – Episode|Autoclave – Still Here|Duh – Hex|Lois – Press Play and Record|Dumbhead – Good and Plenty|Sky High Style – 1 Song|Spitboy – Motivated by Fear|Tim Green – No. 6|Tsunami – Skinny|Donna – Trains","chainsaw-mixtape"],"6":["Kathi Wilcox, Billy Karren, Molly Neuman, Tobi Vail, and Michelle Orr","A Malice And Discontent|A I Just Wanna Puke On The Stereo|A Do You Wanna Donuts|A Baby Plays For Pritty|B Alien Summer|B Fuck Kitty|B Giveaway Pile","frumpies-frumpies-7"],"7":["Corin Tucker, Becca Albee","You Can’t Break a Broken Heart|The Times (Kerry)|20/20 Vision|Johnny|Movie Theme Song|noise noise noise","the-heartless-martin-tonigh"],"8":["Rachel Carns, Kathleen Hanna, Tim Green, Sue Fox, Tae Won Yu, Angie, Billie Strain, and Phyllis","Competition Fiction|Freak|Humunculus|Burnt Girl|Holly Hobbie Outfit|Pretty Ballerina Pleasure|Secret Weapon|Safety Cuts|Sgt. Fuckerman|Identity Smidentity|No More Scary Moustache Men|Li’l Mommy|Pop Song|Fake Country Song|New Wave Song|Steve Society|Held|Official Hex","the-fakes-real-fiction"],"9":["Carrie Brownstein, Becca Albee, Curtis Phillips","Vanishing Act|Two Faced|Cut And Dry|Hope You Feel Bad|Despise|Carson|Code Red|We’re The Seniors (And We Rule The School)|Imaginary Friend|Groundhog’s Day|Break And Enter","excuse-17-excuse-seventeen"],"10":["Corin Tucker, Tracy Sawyer","Direction|Get Out Of My Head|The Ones|Driving Song","heavens-to-betsy-direction-7"],"11":["Marci Martinez, Donna Dresch, Kaia Kangaroo, Jody Coyote","Fagetarian And Dyke|Hate The Christian Right!|She’s Crushing My Mind|Freewheel|She’s Amazing|Fake Fight|#1 Chance Pirate TV|D.A. Don’t Care|Growing Up In Springfield|Screwing Yer Courage","team-dresch-personal-best"],"12":["Corin Tucker, Carrie Kinney (Carrie Brownstein), Lora MacFarland","Don’t Think You Wanna|The Day I Went Away|A Real Man|Her Again|How To Play Dead|Be Yr Mama|Sold Out|Slow Song|Lora’s Song|The Last Song","sleater-kinney-sleater-kinney"],"13":["Corin Tucker, Carrie Kinney (Carrie Brownstein), Lora MacFarland","Call The Doctor|Hubcap|Little Mouth|Anonymous|Stay Where You Are|Good Things|I Wanna Be Your Joey Ramone|Taking Me Home|Taste Test|My Stuff|I’m Not Waiting|Heart Attack","sleater-kinney-call-the-doctor"],"14":["Kaia, Denk, and Toad","19|Test|Salamander|Madame|16|Hmphh|Statue|Delilah|No Sides|Memory|Julie Of The Wolves|Mudball|Keep Us Empty","kaia-kaia"],"15":["Mr Peyton (Peyton Marshall), Trish Walsh, The Killer","Crazy Glue|Un Deux Trois Cat!|Definition|Blue Room|Bella|Time Bomb|Trouble|Your Good Luck|Miles Per Hour|Roy|Rival|Love In The Basement","the-third-sex-card-carryin"],"17":["David Gomez, Sherri Solinger, Michelle Stevenson, Tamala Poljak","Teenage Angst At 27|Jehu On A Rollercoaster|Passing The Crown|Autobarb|Goddess Pt. 4|Radio Agony|Not A Jerk|Equator|Oscar Nite|Bus","longstocking-once-upon-a-time-called-now"],"18":["Jody, Kaia, Donna, and Melissa","Uncle Phranc|107|My Dirty Hands Are Mined|The Council|Don’t Try Suicide|To The Enemies Of Political Rock|Take On Me|I’m Illegal|Yes I Am Too, But Who Am I Really?|Musical Fanzine|Remember Who You Are","team-dresch-captain-my-captain"],"19":["Rachel Carns, Radio Sloan","Whitewash Cannonball|Jacky The Ripper|Crown|Don’t Touch The Ribbon|Majesty|Rim Me Isabella|Sam|Pony 4 Honey","the-need-the-need"],"20":["Rachel Carns, Radio Sloan","Circuit Side|2-Story Girl|Blew Candy|Vaselina|Dear Diary|Eva Carriere|O Sally How’s It Feel With A Fake Hand?|Dark Sally/Conjuration Against The 7-Liars-In-Wait/Sally Iscariot/Overt|Hellfire|Mona Tinsley","the-need-the-need-is-dead"],"21":["Peyton, Shari, and Trish","Maul 10.09.97|More Than Your Friends|Wonderful Life|At Least I Got Some Cool Clothes|Shiny Thing|Projected Arrival|Second Place|Can’t Save Your Sorbet|Lights Out|Break Me Up|I Spy|Metal Skin|Go Away","the-third-sex-back-to-go"],"22":["Neil Gust, Gilly Ann Hanner, Paul Pulvirenti","Critical Mass|Never Felt Better|Move It Along|So Long|Just Answer The Man|Pop In C|Practicing Your Moves|Pop In A Minor|Nobody’s Satisfied|Parting Kiss","no-2-no-memory","Album features Sam Coomes on bass on “Never Felt Better” and “Nobody’s Satisfied” and he sang backup on “So Long.” Elliott Smith sang backup on “Critical Mass” and “So Long.” Tony Lash played electric piano on “Never Felt Better.” Joanna Bolme and Stef Darensbourg clapped hands on “Critical Mass.”"],"23":["Wynne Greenwood","City|OOO!|Arcade Suicide|Bury The Hair|Untitled|At The Gold + Diamond Center|(We Met The) Queerion|Dio|Ain’t Never Gonna Die|Flim|Bear (Attacking)|The Myth Of The Front","tracy-the-plastics-musclers-guide-to-videonics"],"25":["Jody Bleyle, Tamala Poljak, Whitney Skillkorn, Scotty Walsh","Welcome To The Show|Chosen One|What I Believe|Joanna|Bittersweet|The Body’s Beat|Shoot ‘em In The Foot|A Thousand Ways|No One Else|A Funny Place To Start To Cry|17|Brand New Reconnection","the-infinite-xs-the-infinite-xs"],"26":["Wynne Greenwood","Best Of The 70s, 80s And 90s|Dog|Hey Rubella|Destroyer|My Friends End Parties","tracy-the-plastics-forever-sucks-ep"]}};const modal=document.querySelector('#detail'),q=s=>document.querySelector(s);
+document.querySelectorAll('.tile').forEach(button=>button.addEventListener('click',()=>{
+ const card=DATA.cards.find(c=>c.id===button.dataset.id),d=DATA.details[card.id];q('#detail-number').textContent=card.cat;q('#detail-title').textContent=card.artist+(card.title&&card.title!=='&nbsp;'?' · '+card.title:'');q('#detail-format').textContent=card.format==='&nbsp;'?'':card.format;
+ const img=q('#detail-image');img.hidden=!card.src;if(card.src){img.src=card.src;img.alt=card.artist+' artwork'}
+ q('#detail-members').textContent=d&&d[0]?'Members: '+d[0]:'';q('#detail-note').textContent=d&&d[3]?d[3]:'';q('#track-section').hidden=!d;const list=q('#tracks');list.replaceChildren();if(d)d[1].split('|').forEach(t=>{const li=document.createElement('li');li.textContent=t;list.appendChild(li)});
+ const link=q('#original');link.hidden=!d&&card.id!=='z';if(d)link.href='https://web.archive.org/web/20140109004155/http://chainsawrecords.com/'+d[2]+'/';else if(card.id==='z')link.href='https://web.archive.org/web/20131210114935/http://chainsawrecords.com/chainsaw-zine-2/';
+ modal.showModal();
+}));q('.close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
+</script></body></html>

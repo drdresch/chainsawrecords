@@ -1,58 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-  <title>Chainsaw Records Catalog</title>
-  <style>
-:root{color-scheme:light;--ink:#202029;--muted:#66616a;--line:#ded9dc;--accent:#793e53;--paper:#faf9f8}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e7ce55">
+<meta name="description" content="The Chainsaw Records catalog. Records, tapes and zines from Portland, Oregon.">
+<title>Chainsaw Records</title>
+<style>
+:root{--paper:#f5f4ef;--ink:#171717;--muted:#66635e;--yellow:#e7ce55;--line:#cfcdc4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
-header{padding:34px max(24px,calc((100vw - 1200px)/2));border-bottom:1px solid var(--line)}
-header h1{margin:0;font-size:clamp(1.8rem,4vw,2.65rem);letter-spacing:-.055em;line-height:1.05;font-weight:800}
-header p{margin:.45rem 0 0;font-size:.88rem;color:var(--muted)}
-main{max-width:1200px;margin:auto;padding:48px 24px 96px}
-section+section{margin-top:72px}
-h2{margin:0 0 25px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:1.35rem;letter-spacing:-.025em}
-.catalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:38px 22px}
+body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+.top{background:var(--yellow);border-bottom:1px solid var(--ink)}
+.top-inner,.wrap{max-width:1440px;margin:0 auto;padding-left:clamp(22px,5vw,76px);padding-right:clamp(22px,5vw,76px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:23px;font-size:.85rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.bar a{text-decoration:none;border-bottom:1px solid currentColor;padding:4px 0}
+.hero{padding-top:clamp(58px,10vw,135px);padding-bottom:clamp(42px,6vw,80px)}
+.logo{display:block;width:min(100%,1050px);height:auto}
+.intro{border-top:1px solid rgba(23,23,23,.7);display:flex;justify-content:space-between;align-items:end;gap:28px;margin-top:clamp(42px,6vw,80px);padding-top:20px}
+.intro h1{font-size:clamp(1.4rem,3.1vw,2.7rem);line-height:1.12;letter-spacing:-.045em;margin:0;font-weight:700}
+.intro p{margin:0;font-size:.9rem;white-space:nowrap}
+main{padding-top:clamp(56px,7vw,100px);padding-bottom:100px}
+.heading{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:30px}
+.heading h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.06em;line-height:1;margin:0}
+.heading span{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.catalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:48px 22px}
 .release{min-width:0}
-.cover-box{aspect-ratio:1;overflow:hidden;background:#ebe7e8;display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.cover-box{aspect-ratio:1;overflow:hidden;background:#e5e3dc;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
 .cover-box img{width:100%;height:100%;object-fit:cover}
 .archive-art img,.zine-art img{object-fit:contain}
-.no-scan{font-size:.85rem;color:#746d70}
-.info{display:flex;flex-direction:column;gap:2px}
-.cat-num{font-size:.75rem;font-weight:700;letter-spacing:.075em;color:var(--accent);margin-bottom:4px}
-.artist{font-size:1.05rem;font-weight:700;line-height:1.3}
-.title{font-size:1rem;color:#413c40}
+.no-scan{font-size:.85rem;color:var(--muted)}
+.info{display:flex;flex-direction:column;gap:3px}
+.cat-num{font-size:.75rem;font-weight:700;letter-spacing:.07em;color:#625c46;margin-bottom:4px}
+.artist{font-size:1.05rem;font-weight:750;line-height:1.25}
+.title{font-size:1rem;line-height:1.35}
 .fmt-year{font-size:.85rem;color:var(--muted)}
-footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;color:var(--muted);font-size:.85rem}
-@media(max-width:800px){.catalog{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:560px){header{padding:26px 20px}main{padding:36px 20px 72px}.catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}section+section{margin-top:54px}.artist{font-size:.95rem}.title{font-size:.9rem}}
+footer{border-top:1px solid var(--ink)}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;padding-top:25px;padding-bottom:30px;font-size:.85rem}
+@media(max-width:850px){.catalog{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 18px}}
+@media(max-width:560px){.bar{font-size:.72rem}.hero{padding-top:60px}.intro{display:block}.intro p{margin-top:15px}.heading{margin-bottom:22px}.heading span{font-size:.75rem}.catalog{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 14px}.artist{font-size:.95rem}.title{font-size:.92rem}.fmt-year{font-size:.8rem}main{padding-bottom:70px}.foot-inner{display:block}.foot-inner span{display:block;margin-top:8px}}
 </style>
 </head>
 <body>
-  <header>
-    <h1>Chainsaw Records</h1>
-    <p>Portland, Oregon • Est. 1991</p>
-  </header>
-  <main>
-    <section>
-      <h2>Zines</h2>
-      <div class="catalog">
-        <div class="release">
-          <div class="cover-box zine-art"><img src="images/chainsaw-zine-2.jpg" alt="Yellow cover of Chainsaw zine number 2"></div>
-          <div class="info"><div class="artist">Zines</div></div>
+<header class="top"><div class="top-inner">
+<div class="bar"><span>Portland, Oregon</span><a href="#catalog">Browse the catalog</a></div>
+<div class="hero"><img class="logo" src="images/chainsaw-logo.png" alt="Chainsaw Records">
+<div class="intro"><h1>Records, tapes &amp; zines.</h1><p>Independent since 1991</p></div></div>
+</div></header>
+<main class="wrap" id="catalog">
+<div class="heading"><h2>The catalog</h2><span>Records, tapes &amp; zines</span></div>
+<div class="catalog">
+<div class="release">
+          <div class="cover-box zine-art"><img loading="lazy" src="images/chainsaw-zine-2.jpg" alt="Yellow cover of Chainsaw zine number 2"></div>
+          <div class="info"><div class="cat-num">CHAINSAW 1–3.5</div><div class="artist">Zines</div></div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Records</h2>
-      <div class="catalog">
-        <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-4.jpg" alt="CHSW 4 artwork from the Chainsaw archive"></div>
+<div class="release">
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-4.jpg" alt="CHSW 4 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 4</div>
             <div class="artist">Various Artists</div>
@@ -70,7 +74,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-6.jpg" alt="CHSW 6 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-6.jpg" alt="CHSW 6 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 6</div>
             <div class="artist">Frumpies</div>
@@ -79,7 +83,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-7.jpg" alt="CHSW 7 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-7.jpg" alt="CHSW 7 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 7</div>
             <div class="artist">Heartless Martin</div>
@@ -88,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-8.jpg" alt="CHSW 8 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-8.jpg" alt="CHSW 8 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 8</div>
             <div class="artist">The Fakes</div>
@@ -97,7 +101,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-9.jpg" alt="CHSW 9"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-9.jpg" alt="CHSW 9"></div>
           <div class="info">
             <div class="cat-num">CHSW 9</div>
             <div class="artist">Excuse Seventeen</div>
@@ -106,7 +110,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-10.jpg" alt="CHSW 10 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-10.jpg" alt="CHSW 10 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 10</div>
             <div class="artist">Heavens to Betsy</div>
@@ -115,7 +119,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-11.jpg" alt="CHSW 11"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-11.jpg" alt="CHSW 11"></div>
           <div class="info">
             <div class="cat-num">CHSW 11</div>
             <div class="artist">Team Dresch</div>
@@ -124,7 +128,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-12.png" alt="CHSW 12"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-12.png" alt="CHSW 12"></div>
           <div class="info">
             <div class="cat-num">CHSW 12</div>
             <div class="artist">Sleater-Kinney</div>
@@ -133,7 +137,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-13.jpg" alt="CHSW 13"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-13.jpg" alt="CHSW 13"></div>
           <div class="info">
             <div class="cat-num">CHSW 13</div>
             <div class="artist">Sleater-Kinney</div>
@@ -142,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-14.jpg" alt="CHSW 14 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-14.jpg" alt="CHSW 14 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 14</div>
             <div class="artist">Kaia</div>
@@ -151,7 +155,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-15.jpg" alt="CHSW 15"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-15.jpg" alt="CHSW 15"></div>
           <div class="info">
             <div class="cat-num">CHSW 15</div>
             <div class="artist">The Third Sex</div>
@@ -160,7 +164,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-17.jpg" alt="CHSW 17 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-17.jpg" alt="CHSW 17 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 17</div>
             <div class="artist">Longstocking</div>
@@ -169,7 +173,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-18.jpg" alt="CHSW 18"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-18.jpg" alt="CHSW 18"></div>
           <div class="info">
             <div class="cat-num">CHSW 18</div>
             <div class="artist">Team Dresch</div>
@@ -178,7 +182,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-19.jpg" alt="CHSW 19"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-19.jpg" alt="CHSW 19"></div>
           <div class="info">
             <div class="cat-num">CHSW 19</div>
             <div class="artist">The Need</div>
@@ -187,7 +191,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-20.jpg" alt="CHSW 20"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-20.jpg" alt="CHSW 20"></div>
           <div class="info">
             <div class="cat-num">CHSW 20</div>
             <div class="artist">The Need</div>
@@ -196,7 +200,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-21.jpg" alt="CHSW 21"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-21.jpg" alt="CHSW 21"></div>
           <div class="info">
             <div class="cat-num">CHSW 21</div>
             <div class="artist">The Third Sex</div>
@@ -205,7 +209,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-22.jpg" alt="CHSW 22 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-22.jpg" alt="CHSW 22 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 22</div>
             <div class="artist">No. 2</div>
@@ -214,7 +218,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box"><img src="images/chsw-23.jpg" alt="CHSW 23"></div>
+          <div class="cover-box"><img loading="lazy" src="images/chsw-23.jpg" alt="CHSW 23"></div>
           <div class="info">
             <div class="cat-num">CHSW 23</div>
             <div class="artist">Tracy + The Plastics</div>
@@ -223,7 +227,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-25.jpg" alt="CHSW 25 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-25.jpg" alt="CHSW 25 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 25</div>
             <div class="artist">The Infinite Xs</div>
@@ -232,7 +236,7 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
           </div>
         </div>
         <div class="release">
-          <div class="cover-box archive-art"><img src="images/archive-chsw-26.jpg" alt="CHSW 26 artwork from the Chainsaw archive"></div>
+          <div class="cover-box archive-art"><img loading="lazy" src="images/archive-chsw-26.jpg" alt="CHSW 26 artwork from the Chainsaw archive"></div>
           <div class="info">
             <div class="cat-num">CHSW 26</div>
             <div class="artist">Tracy + The Plastics</div>
@@ -240,11 +244,6 @@ footer{border-top:1px solid var(--line);padding:30px 24px;text-align:center;colo
             <div class="fmt-year">CD, 2002</div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    &copy; 2026 Chainsaw Records • Portland, Oregon
-  </footer>
-</body>
-</html>
+</div></main>
+<footer><div class="wrap foot-inner"><strong>Chainsaw Records</strong><span>Portland, Oregon</span></div></footer>
+</body></html>
